@@ -1,0 +1,38 @@
+
+  <div class="card" style="align-content:center;">
+    <create-project></create-project>
+  </div>
+
+  <div class="card" style="align-content:center;">
+    <p *ngIf="!projects"><em>Loading...</em></p>
+
+    <table id="dtBasicExample" class='table table-striped' aria-labelledby="tableLabel" *ngIf="projects">
+      <thead>
+        <tr>
+
+          <th class="th-sm">Project Name</th>
+          <th class="th-sm">Assign To</th>
+          <th class="th-sm">Comment</th>
+          <th class="th-sm">Created Date</th>
+          <th class="th-sm">Total Hours</th>
+          <th class="th-sm">Is Completed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let project of projects">
+
+          <td>{{ project.name }}</td>
+          <td>{{ project.assignTo }}</td>
+          <td>{{ project.comment }}</td>
+          <td>{{ project.createdDate }}</td>
+          <td>{{ project.hoursWorked }}</td>
+          <td>{{ project.isCompleted }}</td>
+        
+
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+

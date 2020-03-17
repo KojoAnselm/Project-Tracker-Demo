@@ -1,0 +1,34 @@
+
+
+
+
+<p *ngIf="!projectDetails"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="projectDetails">
+  <thead>
+    <tr>
+      <th>Project Name</th>
+      <th>Assign To</th>
+      <th>Created Date</th>
+      <th>Started Date</th>
+      <th>Completion Date</th>
+      <th>Comment</th>
+      <th>Response</th>
+      <th>Hours Worked</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let rec of projectDetails">
+      <td>{{ rec.project.name }}</td>
+      <td>{{ rec.project.assignedTo }}</td>
+      <td>{{ rec.project.createdDate }}</td>
+      <td>{{ rec.startDate }}</td>
+      <td>{{ rec.completedDate }}</td>
+      <td>{{ rec.project.comment }}</td>
+      <td>{{ rec.comment }}</td>
+      <td>{{ rec.hoursWorked }}</td>
+
+    </tr>
+  </tbody>
+</table>
